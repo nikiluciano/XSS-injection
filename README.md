@@ -1,11 +1,11 @@
-# hi-jacket
-Hi-Jacket - A GPU cryptojacker script
+# XSS.injection
+A GPU cryptojacker script
 
 # Getting Started
 First of all clone the repository
 ```shell
-git clone https://github.com/ZappaBoy/hi-jacket.git
-cd hi-jacket
+git clone https://github.com/nikiluciano/XSS-injection.git
+cd XSS-injection
 ```
 ## Run testing environment
 Run the testing enviroment through `docker-compose`.
@@ -31,7 +31,7 @@ Here is an example:
 
 ```shell
 GET         http://xss-game.appspot.com                                     /level1/frame?query=XSS
-POST        http://localhost:8060/vulnerabilities/xss_s/index.php           txtName=hijacked&mtxMessage=XSS&btnSign=Sign+Guestbook      PHPSESSID="YOURPHPSESSID;;security=low"
+POST        http://localhost:8060/vulnerabilities/xss_s/index.php           txtName=hijacked&mtxMessage=XSS&btnSign=Sign+Guestbook      PHPSESSID=YOURPHPSESSID;security=low
 ALL         http://localhost:8060/vulnerabilities/xss_s/index.php
 AUTO        http://xss-game.appspot.com                                     /level1/frame?query=XSS
 DEFAULT     http://xss-game.appspot.com                                     /level1/frame?query=XSS
